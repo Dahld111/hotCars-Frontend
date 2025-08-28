@@ -1,0 +1,36 @@
+<div class="container">
+  <h2>Detalle del Vehículo</h2>
+
+  <div *ngIf="loading" class="loading">Cargando detalles...</div>
+  <div *ngIf="error" class="error">{{error}}</div>
+
+  <div *ngIf="!loading && !error && vehicleDetail">
+    <div class="details-container">
+      <div class="details">
+        <p><strong>Categoría:</strong> {{vehicleDetail.VehicleOption.Vehicle.VehicleCategory}}</p>
+        <p><strong>Proveedor:</strong> {{vehicleDetail.VehicleOption.Company.Name}}</p>
+        <p><strong>Transmisión:</strong> {{vehicleDetail.VehicleOption.Vehicle.TransmissionType}}</p>
+        <p><strong>Aire Acondicionado:</strong> {{vehicleDetail.VehicleOption.Vehicle.AirConditioned ? 'Sí' : 'No'}}</p>
+        <p><strong>PickUp:</strong> {{vehicleDetail.VehicleOption.PickUp.Address}}</p>
+        <p><strong>DropOff:</strong> {{vehicleDetail.VehicleOption.DropOff.Address}}</p>
+      </div>
+
+      <div class="image">
+        <img [src]="vehicleDetail.VehicleOption.Vehicle.Image" [alt]="vehicleDetail.VehicleOption.Vehicle.Model">
+      </div>
+    </div>
+
+    <div class="rates">
+      <h4>Tarifas disponibles:</h4>
+      <div *ngFor="let rate of vehicleDetail.VehicleOption.Rates" 
+           class="rate" 
+           (click)="selectRate(rate.RateId)">
+        <strong>{{rate.RateDescription}}</strong><br>
+        Precio: {{rate.PricePayNow.Total | number}} {{rate.PricePayNow.CurrencyCode}}
+        <ul>
+          <li *ngFor="let inclusion of rate.Includes">✔️ {{inclusion.InclusionType}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

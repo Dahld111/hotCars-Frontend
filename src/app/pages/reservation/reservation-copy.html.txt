@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="header">
+    <div class="icon">✔️</div>
+    <h1>Reservation Confirmed</h1>
+    <p>Your reservation number is:</p>
+    <div class="reservation-number">{{reservation?.TravelItineraryId}}</div>
+  </div>
+
+  <div class="section">
+    <h3>Dates</h3>
+    <p>Pick-Up: {{formatDate(reservation?.PickupDateTime)}}</p>
+    <p>Drop-Off: {{formatDate(reservation?.DropOffDateTime)}}</p>
+  </div>
+
+  <div class="section">
+    <h3>Vehicle</h3>
+    <img [src]="reservation?.Vehicle.Image" [alt]="reservation?.Vehicle.Model" style="max-width: 200px;"><br>
+    <p>Model: {{reservation?.Vehicle.Model}}</p>
+    <p>Category: {{reservation?.Vehicle.VehicleCategory}}</p>
+    <p>Transmission: {{reservation?.Vehicle.TransmissionType}}</p>
+    <p>Air Conditioning: {{reservation?.Vehicle.AirConditioned ? 'Yes' : 'No'}}</p>
+  </div>
+
+  <div class="section">
+    <h3>Locations</h3>
+    <p><strong>PickUp:</strong> {{reservation?.PickupLocation?.Address}}</p>
+    <p><strong>DropOff:</strong> {{reservation?.DropOffLocation?.Address}}</p>
+  </div>
+
+  <div class="section" *ngIf="reservation?.Passengers?.length > 0">
+    <h3>Driver</h3>
+    <p>{{reservation.Passengers[0].FirstName}} {{reservation.Passengers[0].LastName}}</p>
+    <p>Email: {{reservation.Passengers[0].Email}}</p>
+    <p>Phone: {{reservation.Passengers[0].Phone}}</p>
+    <p>Nationality: {{reservation.Passengers[0].NationalityDescription}}</p>
+  </div>
+
+  <div class="section">
+    <h3>Price</h3>
+    <p>Total: {{reservation?.Price?.Total | number}} {{reservation?.Price?.CurrencyCode}}</p>
+  </div>
+
+  <div class="section" *ngIf="reservation?.CommentContracts">
+    <h3>Terms & Conditions</h3>
+    <div [innerHTML]="reservation.CommentContracts"></div>
+  </div>
+
+  <div class="footer">
+    <button class="btn" (click)="newReservation()">Make a new reservation</button>
+  </div>
+</div>

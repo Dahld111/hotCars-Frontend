@@ -1,0 +1,66 @@
+/* Centrado visual del login */
+.login-container {
+  position: absolute;
+  top: 15%; /* Ligeramente más arriba del centro */
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100%;
+  max-width: 400px;
+  padding: 30px 40px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 2px solid #a4c3d1; /* Azul niebla */
+  border-radius: 0px; /* Bordes cuadrados */
+  backdrop-filter: blur(6px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  color: #2c3e50;
+  z-index: 10;
+}
+
+/* Título del formulario */
+.login-container h1 {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #2c3e50;
+  text-shadow: 1px 1px 2px rgba(44, 62, 80, 0.3);
+}
+
+/* Campos de entrada */
+.login-container div {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-container label {
+  margin-bottom: 6px;
+  font-size: 0.95em;
+  color: #2c3e50;
+}
+
+.login-container input {
+  padding: 10px 12px;
+  border: 1px solid #c5c6d0;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #2c3e50;
+  border-radius: 4px;
+  font-size: 0.95em;
+  transition: border 0.3s ease;
+}
+
+/* Botón de envío */
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #2c3e50;
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #1a252f;
+}

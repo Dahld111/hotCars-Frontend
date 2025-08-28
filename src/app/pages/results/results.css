@@ -1,0 +1,54 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  background: rgba(40, 40, 40, 0.8);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s;
+  border: 1px solid transparent;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border: 1px solid var(--primary);
+  box-shadow: 0 10px 20px rgba(255, 69, 0, 0.3);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-bottom: 2px solid var(--primary);
+}
+
+.category{
+  background: white;
+  padding: 9rem;
+}
+.category h3 {
+  border-bottom: 2px solid var(--secondary);
+  padding-bottom: 5px;
+  margin-top: 30px;
+  
+}
+
+.price {
+  font-weight: bold;
+  color: var(--accent);
+}

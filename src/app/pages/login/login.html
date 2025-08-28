@@ -1,0 +1,20 @@
+<form 
+  class="login-container" 
+  action=""
+  [formGroup]="formData"
+  (submit)="onSubmit()">
+  
+  <h1>Login</h1>
+
+  <div>
+    <label for="email">email</label>
+    <input type="email" formControlName="email" id="email" />
+  </div>
+
+  <div>
+    <label for="password">password</label>
+    <input type="password" formControlName="password" id="password" />
+  </div>
+
+  <button type="submit">Iniciar sesión</button>
+</form>

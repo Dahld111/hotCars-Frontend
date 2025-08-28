@@ -1,0 +1,18 @@
+<script src="src/assets/ciudades.js"></script>
+<script src="src/assets/widget.js"></script>
+
+
+<p>Buscador</p>
+<div>
+  <label>Ciudad Pickup</label>
+  <input type="text" id="pickupCity">
+
+  <label>Fecha Pickup</label>
+  <input type="date" id="pickupDate">
+
+  <label>Fecha Dropoff</label>
+  <input type="date" id="dropoffDate">
+
+  <button id="searchBtn">Buscar</button>
+</div>
+

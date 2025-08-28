@@ -1,0 +1,1 @@
+var external_file_Cities = ["Bogota (BOG)", "Medellin (MDE)", "Miami (MIA)", "New York (NYC)"];

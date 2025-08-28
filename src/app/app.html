@@ -1,0 +1,8 @@
+<div class="background-layer"></div>
+<div>
+    <div *ngIf="lookElement()" class="auth-container">
+        <a href="/login" class="login-container">Login</a>
+        <a href="/register" class="register-container">Register</a>
+    </div>
+    <router-outlet />
+</div>
