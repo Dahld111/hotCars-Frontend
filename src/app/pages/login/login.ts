@@ -23,7 +23,7 @@ export class Login {
 
   onSubmit() {
     if( this.formData.valid ) {
-      console.log( this.formData.value );  // {email: 'jcarlosj.dev@gmail.com', password: 'wqeqweqw'}
+      console.log( this.formData.value );
       
       this.authServices.loginUser( this.formData.value ).subscribe({
         next: ( data: any ) => {
