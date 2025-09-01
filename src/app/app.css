@@ -1,0 +1,115 @@
+header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.logo_container {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.right_container ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.right_container li {
+  cursor: pointer;
+  font-size: 1rem;
+  color: #34495e;
+  transition: color 0.3s ease;
+}
+
+.right_container li:hover {
+  color: #007bff;
+  text-decoration: underline;
+}
+.header-title {
+    color: black;
+}
+
+.home-container {
+  display: grid;
+  grid-template-columns: 1fr; /* móvil: 1 columna */
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #e3e6e47a;
+  font-family: "Segoe UI", sans-serif;
+  color: var(--color-primary);
+}
+
+/* En desktop: 2 columnas */
+@media (min-width: 992px) {
+  .home-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Cada sección como tarjeta */
+.home-container section {
+  background-color: var(--color-surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-container section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Flex interno para texto e imagen */
+.section-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .section-flex {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.section-text {
+  flex: 1 1 60%;
+}
+
+.section-image {
+  flex: 1 1 35%;
+  display: flex;
+  justify-content: center;
+}
+
+.section-image img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: var(--shadow-soft);
+}

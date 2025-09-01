@@ -1,15 +1,15 @@
 <div class="register-container">
-  <h2>Create Your Account</h2>
+  <h2>Registrate</h2>
   
   <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="register-form">
     <!-- Name Field -->
     <div class="form-group">
-      <label for="name">Full Name</label>
+      <label for="name">Nombre</label>
       <input 
         type="text" 
         id="name" 
         formControlName="name" 
-        placeholder="Enter your full name"
+        placeholder="Ingrese su nombre"
         [class.invalid]="f['name'].invalid && (f['name'].dirty || f['name'].touched)"
       >
       <div *ngIf="f['name'].invalid && (f['name'].dirty || f['name'].touched)" class="error-message">
@@ -25,7 +25,7 @@
         type="email" 
         id="email" 
         formControlName="email" 
-        placeholder="Enter your email"
+        placeholder="Ingrese su correo electronico"
         [class.invalid]="f['email'].invalid && (f['email'].dirty || f['email'].touched)"
       >
       <div *ngIf="f['email'].invalid && (f['email'].dirty || f['email'].touched)" class="error-message">
@@ -37,7 +37,7 @@
     <!-- Document Type and Number -->
     <div class="form-row">
       <div class="form-group">
-        <label for="documentType">Document Type</label>
+        <label for="documentType">Tipo de Documento</label>
         <select 
           id="documentType" 
           formControlName="documentType"
@@ -48,12 +48,12 @@
       </div>
 
       <div class="form-group">
-        <label for="documentNumber">Document Number</label>
+        <label for="documentNumber">Numero de Documento</label>
         <input 
           type="text" 
           id="documentNumber" 
           formControlName="documentNumber" 
-          placeholder="Enter document number"
+          placeholder="Ingrese su documento"
           [class.invalid]="f['documentNumber'].invalid && (f['documentNumber'].dirty || f['documentNumber'].touched)"
         >
         <div *ngIf="f['documentNumber'].invalid && (f['documentNumber'].dirty || f['documentNumber'].touched)" class="error-message">
@@ -65,12 +65,12 @@
 
     <!-- Password Field -->
     <div class="form-group">
-      <label for="password">Password</label>
+      <label for="password">Contraseña</label>
       <input 
         type="password" 
         id="password" 
         formControlName="password" 
-        placeholder="Enter your password"
+        placeholder="Ingrese su contraseña"
         [class.invalid]="f['password'].invalid && (f['password'].dirty || f['password'].touched)"
       >
       <div *ngIf="f['password'].invalid && (f['password'].dirty || f['password'].touched)" class="error-message">
@@ -89,13 +89,13 @@
 
     <!-- Submit Button -->
     <button type="submit" class="submit-btn" [disabled]="isLoading || registerForm.invalid">
-      <span *ngIf="!isLoading">Register</span>
+      <span *ngIf="!isLoading">Registarse</span>
       <span *ngIf="isLoading">Processing...</span>
     </button>
 
-    <!-- Login Link -->
+    <!-- Login Link --> 
     <div class="login-link">
-      Already have an account? <a routerLink="/login">Sign in</a>
+      ¿Ya tienes una cuenta? <a href="/login">Iniciar sesion</a>
     </div>
   </form>
 </div>

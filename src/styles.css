@@ -1,4 +1,24 @@
-/* Hoja de estilos para app.html */
+:root {
+  /* Tonos base */
+  --color-bg-base: #e3e6e4;              /* Gris verdoso claro */
+  --color-surface: #ffffff;              /* Blanco puro para superficies */
+  --color-primary: #2f4038;              /* Verde grisáceo profundo */
+  --color-secondary: #3e5f4b;            /* Verde montaña */
+  --color-muted: #a9cbb7;                /* Verde claro suave */
+
+  /* Acentos y acciones */
+  --color-accent: #5f7d6b;               /* Verde oliva frío */
+  --color-accent-hover: #4c6a59;         /* Hover más profundo */
+  --color-success-light: rgba(168, 213, 186, 0.5); /* Verde ártico translúcido */
+
+  /* Sombras y profundidad */
+  --shadow-medium: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --text-shadow: 1px 1px 2px rgba(47, 64, 56, 0.3);
+
+  /* Transparencias */
+  --glass-bg: rgba(255, 255, 255, 0.06);
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -14,64 +34,105 @@ body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
   background-size: cover;
-  color: #2c3e50;
+  color: var(--color-primary);
   min-height: 100vh;
   background: transparent;
 }
 
 body::before {
-    content: "";
-  position: fixed;         /* Fondo permanece fijo en pantalla */
-  inset: 0;                /* shorthand para top/right/bottom/left = 0 */
-  background: url('img/background-1.jpg') no-repeat center center;
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url('img/background-1.png') no-repeat center center;
   background-size: cover;
   opacity: 0.5;
   z-index: -1;
 }
 
-
 /* Encabezado */
 h1 {
   text-align: center;
   font-size: 2.5em;
-  color: #a4c3d1; /* Azul niebla */
-  text-shadow: 1px 1px 2px rgba(44, 62, 80, 0.4);
+  color: var(--color-muted); /* Verde claro suave */
+  text-shadow: var(--text-shadow);
 }
 
-/* Contenedor principal */
 /* Enlaces */
 a {
   text-decoration: none;
   margin: 0 15px;
   padding: 10px 20px;
-  color: #b2ebf2; /* Turquesa pálido */
-  background-color: rgba(44, 62, 80, 0.6);
+  color: var(--color-surface); /* Blanco puro */
+  background-color: var(--color-accent);
   border-radius: 6px;
   transition: all 0.3s ease;
 }
 
 a:hover {
-  background-color: rgba(44, 62, 80, 0.8);
-  color: #ffffff;
+  background-color: var(--color-accent-hover);
+  color: var(--color-muted);
 }
 
 /* Registro con estilo distintivo */
 .register-container {
-  background-color: rgba(168, 213, 186, 0.5); /* Verde ártico */
-  color: #2c3e50;
+  background-color: var(--color-success-light);
+  color: var(--color-primary);
   font-weight: bold;
 }
 
-/* Pie de página */
-footer, h1:last-of-type {
-  text-align: center;
-  font-size: 1.2em;
-  margin: 40px 0 20px;
-  color: #c5c6d0; /* Lavanda grisácea */
-  opacity: 0.9;
-}
 
 .auth-container {
-    margin: 25% 0;
-    text-align: center;
+  margin: 15% 0;
+  text-align: center;
+}
+
+header {
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-medium);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.logo_container {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.right_container ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.right_container li {
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--color-secondary);
+  transition: color 0.3s ease;
+}
+
+.right_container li:hover {
+  color: var(--color-muted);
+  text-decoration: underline;
+}
+
+.cdk-overlay-pane {
+  background: var(--color-surface) !important;
+}
+
+.mdc-list-item {
+  padding: 0 10px !important;
 }

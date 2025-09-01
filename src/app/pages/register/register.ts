@@ -2,14 +2,14 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthServices } from '../../services/auth-services';
+import { AuthServices } from '../../services/auth.services';
 
 @Component({
   selector: 'app-register',
   standalone: true, // <-- Añade esta línea
   templateUrl: './register.html',
   styleUrls: ['./register.css'],
-  imports: [ReactiveFormsModule, CommonModule] // <-- Correcto para standalone
+  imports: [ReactiveFormsModule, CommonModule]
 })
 export class Register {
   registerForm: FormGroup;
@@ -44,7 +44,6 @@ onSubmit() {
   this.isLoading = true;
   this.errorMessage = '';
 
-  // Reemplaza el setTimeout con tu llamada real al API
   this.authServices.register(this.registerForm.value).subscribe({
     next: () => {
       this.isLoading = false;

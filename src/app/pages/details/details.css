@@ -1,59 +1,88 @@
 .container {
-  margin: 5%;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.container h2 {
+  color: #5f7d6b;
+  margin-bottom: 1.2rem;
+  border-bottom: 2px solid #5f7d6b;
+  padding-bottom: 0.5rem;
 }
 
 .details-container {
   display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
   flex-wrap: wrap;
-  gap: 30px;
-  margin-bottom: 30px;
 }
 
 .details {
   flex: 1;
-  min-width: 300px;
+  background-color: #ffffff;
+  border: 1px solid #5f7d6b;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(95,125,107,0.15);
+}
+
+.details p {
+  margin: 0.5rem 0;
+  color: #3c4a42;
+}
+
+.details strong {
+  color: #5f7d6b;
 }
 
 .image {
-  flex: 1;
-  min-width: 300px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .image img {
   max-width: 100%;
   border-radius: 8px;
-  border: 3px solid var(--primary);
-  box-shadow: 0 0 15px;
+  border: 2px solid #5f7d6b;
 }
 
 .rates {
-  margin-top: 30px;
+  margin-top: 2rem;
+}
+
+.rates h4 {
+  color: #5f7d6b;
+  margin-bottom: 1rem;
 }
 
 .rate {
-  background: rgba(75, 75, 75, 0.7);
-  padding: 15px;
-  margin-bottom: 15px;
-  border-left: 4px solid var(--primary);
-  transition: all 0.3s;
+  background-color: #ffffff;
+  border: 1px solid #5f7d6b;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(95,125,107,0.1);
   cursor: pointer;
+  transition: transform 0.2s ease-in-out;
 }
 
 .rate:hover {
-  background: rgba(70, 70, 70, 0.7);
-  transform: translateX(5px);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(95,125,107,0.2);
+}
+
+.rate strong {
+  color: #5f7d6b;
 }
 
 .rate ul {
-  padding-left: 20px;
-  margin-top: 10px;
+  margin: 0.5rem 0 0;
+  padding-left: 1.2rem;
+  color: #3c4a42;
 }
 
-.rate li {
-  margin-bottom: 5px;
-  color: #ddd;
-}
 
 /* Responsive styles */
 @media (max-width: 768px) {
@@ -65,4 +94,36 @@
     padding: 1em;
     margin: 1em;
   }
+}
+
+.loading {
+  position: fixed;              /* que ocupe toda la pantalla */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9); /* fondo semitransparente */
+  display: flex;
+  flex-direction: column;       /* para que spinner y texto estén en columna */
+  justify-content: center;      /* centrar vertical */
+  align-items: center;          /* centrar horizontal */
+  z-index: 9999;                /* siempre al frente */
+  font-size: 1.5rem;
+  color: #2c3e50;
+}
+
+/* Spinner animado */
+.spinner {
+  border: 6px solid #f3f3f3;    /* borde gris claro */
+  border-top: 6px solid #3498db;/* borde azul */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

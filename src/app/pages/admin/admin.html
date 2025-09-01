@@ -1,1 +1,40 @@
-<p>admin works!</p>
+<h2 class="text-xl font-bold">Mis Reservas</h2>
+
+<table border="1" width="100%">
+  <thead>
+    <tr>
+      <th>Imagen</th>
+      <th>Modelo</th>
+      <th>Categoría</th>
+      <th>Transmisión</th>
+      <th>Aire Acond.</th>
+      <th>Recogida</th>
+      <th>Entrega</th>
+      <th>Precio</th>
+      <th>Conductor</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let r of reservations">
+      <td><img [src]="r.Vehicle.Image" alt="{{ r.Vehicle.Model }}" width="100"></td>
+      <td>{{ r.Vehicle.Model }}</td>
+      <td>{{ r.Vehicle.VehicleCategory }}</td>
+      <td>{{ r.Vehicle.TransmissionType }}</td>
+      <td>{{ r.Vehicle.AirConditioned ? 'Sí' : 'No' }}</td>
+      <td>{{ r.PickupLocation.Address }} <br> {{ r.PickupDate }}</td>
+      <td>{{ r.DropOffLocation.Address }} <br> {{ r.DropOffDate }}</td>
+      <td>{{ r.Price.Total }}</td>
+      <td>
+        <div *ngFor="let d of r.Driver">
+          {{ d.FirstName }} {{ d.LastName }} <br>
+          {{ d.Email }} <br>
+          {{ d.Phone }}
+        </div>
+      </td>
+      <td>
+        <button (click)="deleteReservation(r._id)">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

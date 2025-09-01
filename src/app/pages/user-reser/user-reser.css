@@ -1,0 +1,89 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+thead {
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+th {
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 14px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+td {
+  padding: 12px;
+  font-size: 14px;
+  color: #444;
+  vertical-align: top;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+tr:hover {
+  background-color: #f9f9f9;
+}
+
+img {
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  background-color: #e53935;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #c62828;
+}
+
+td div {
+  line-height: 1.4;
+}
+
+@media screen and (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 12px;
+    background-color: #fff;
+  }
+
+  td {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border: none;
+  }
+
+  td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #666;
+  }
+}

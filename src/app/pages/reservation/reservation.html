@@ -27,12 +27,12 @@
     <p><strong>DropOff:</strong> {{reservation?.DropOffLocation?.Address}}</p>
   </div>
 
-  <div class="section" *ngIf="reservation?.Passengers?.length > 0">
+  <div class="section" *ngIf="reservation?.Driver?.length > 0">
     <h3>Driver</h3>
-    <p>{{reservation.Passengers[0].FirstName}} {{reservation.Passengers[0].LastName}}</p>
-    <p>Email: {{reservation.Passengers[0].Email}}</p>
-    <p>Phone: {{reservation.Passengers[0].Phone}}</p>
-    <p>Nationality: {{reservation.Passengers[0].NationalityDescription}}</p>
+    <p>Name: {{reservation.Driver[0].FirstName}} {{reservation.Driver[0].LastName}}</p>
+    <p>Email: {{reservation.Driver[0].Email}}</p>
+    <p>Phone: {{reservation.Driver[0].Phone}}</p>
+    <p>Nationality: {{reservation.Driver[0].Nationality}}</p>
   </div>
 
   <div class="section">

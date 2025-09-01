@@ -1,7 +1,8 @@
 <div class="container">
   <h2>Detalle del Vehículo</h2>
 
-  <div *ngIf="loading" class="loading">Cargando detalles...</div>
+  <div *ngIf="loading" class="loading"><div class="spinner"></div>
+  <p>Cargando detalles...</p></div>
   <div *ngIf="error" class="error">{{error}}</div>
 
   <div *ngIf="!loading && !error && vehicleDetail">
@@ -16,7 +17,7 @@
       </div>
 
       <div class="image">
-        <img [src]="vehicleDetail.VehicleOption.Vehicle.Image" [alt]="vehicleDetail.VehicleOption.Vehicle.Model">
+        <img [src]="vehicleDetail.VehicleOption.Vehicle.Image" [alt]="vehicleDetail.VehicleOption.Vehicle.Model" onerror="this.src='https://img.freepik.com/fotos-premium/representacion-3d-automovil-generico-marca-entorno-estudio-blanco_101266-12914.jpg';">
       </div>
     </div>
 
@@ -28,7 +29,7 @@
         <strong>{{rate.RateDescription}}</strong><br>
         Precio: {{rate.PricePayNow.Total | number}} {{rate.PricePayNow.CurrencyCode}}
         <ul>
-          <li *ngFor="let inclusion of rate.Includes">✔️ {{inclusion.InclusionType}}</li>
+          <li *ngFor="let inclusion of rate.Includes">✅ {{inclusion.InclusionType}}</li>
         </ul>
       </div>
     </div>

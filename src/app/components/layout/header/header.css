@@ -1,0 +1,75 @@
+header {
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--color-border-header);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo_container {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-text-header);
+}
+
+.right_container ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.right_container a {
+  text-decoration: none;
+  background: none; /* Elimina cualquier fondo */
+  color: var(--color-text-header); /* Aplica el color del texto del header */
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.right_container a:hover {
+  color: var(--color-hover-link); /* Color más intenso al pasar el cursor */
+}
+
+.dropdown {
+  position: relative;
+  cursor: pointer;
+  color: var(--color-text-header);
+  font-weight: 500;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: var(--color-dropdown-bg);
+  border: 1px solid var(--color-dropdown-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-header);
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  min-width: 160px
+}
+.header-logo{
+    width: 100px
+}
+header a {
+  text-decoration: none;   /* o "inherit" si quieres que tome lo del navegador */
+  margin: 0;               /* resetea margen */
+  padding: 0;              /* resetea padding */
+  color: inherit;          /* toma el color del padre */
+  background: none;        /* quita fondo */
+  border-radius: 0;        /* resetea esquinas */
+  transition: none;        /* sin animación */
+}

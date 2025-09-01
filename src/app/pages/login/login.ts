@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { AuthServices } from '../../services/auth-services';
+import { AuthServices } from '../../services/auth.services';
 import { Router } from '@angular/router';
 
 @Component({
@@ -27,7 +27,13 @@ export class Login {
       
       this.authServices.loginUser( this.formData.value ).subscribe({
         next: ( data: any ) => {
-          this.authServices.saveLocalStorage( 'token', data.token );
+          this.authServices.saveLocalStorage('token', data.token );
+          this.authServices.saveLocalStorage('userId', data.user._id);
+          this.authServices.saveLocalStorage('username', data.user.name);
+
+          const isAdmin = data.user?.isAdmin === true; 
+          this.authServices.saveLocalStorage('isAdmin', isAdmin.toString());
+
           this.router.navigateByUrl( 'home' )
         },
         error: ( error ) => {

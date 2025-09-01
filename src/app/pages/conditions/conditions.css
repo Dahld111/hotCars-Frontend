@@ -1,0 +1,111 @@
+:root {
+  /* Paleta HotCars */
+  --color-bg: #e3e6e4;
+  --color-surface: #ffffff;
+  --color-primary: #2f4038;
+  --color-secondary: #3e5f4b;
+  --color-muted: #a9cbb7;
+  --color-accent: #5f7d6b;
+  --color-accent-hover: #4c6a59;
+  --color-divider: #2f4038;
+
+  /* Tipografía y diseño */
+  --font-main: 'Segoe UI', sans-serif;
+  --radius: 12px;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg);
+  font-family: var(--font-main);
+  color: var(--color-primary);
+  line-height: 1.6;
+}
+
+.terms-container {
+  max-width: 960px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+
+.terms-section {
+  background-color: var(--color-surface);
+  padding: 3rem 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+h1 {
+  font-size: 2.4rem;
+  color: var(--color-secondary);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.terms-block {
+  margin-bottom: 2.5rem;
+  padding: 1.5rem 1.25rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-left: 4px solid #5f7d6b;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.terms-block h2 {
+  font-size: 1.5rem;
+  color: var(--color-secondary);
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+.terms-block p {
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+.terms-block ul {
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+.terms-block ul li {
+  margin-bottom: 0.5rem;
+  color: var(--color-primary);
+}
+
+strong {
+  color: var(--color-accent);
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
+}
+
+/* Íconos en la sección de contacto */
+.terms-block ul li::marker {
+  color: var(--color-muted);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .terms-section {
+    padding: 2rem 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .terms-block h2 {
+    font-size: 1.3rem;
+  }
+}

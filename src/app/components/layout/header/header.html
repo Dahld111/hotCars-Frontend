@@ -1,0 +1,24 @@
+<header>
+    <div class="header-container"  >
+        <div class="container logo_container"><a href="/"><img src="/assets/logo.png" class="header-logo" alt="Hot-Cars"></a></div>
+        <div class="container right_container"  *ngIf="hasToken">
+            <ul>
+                <li>
+                    <a href="/home">Nueva Reserva</a>
+                </li>
+                <li>
+                    <a href="/user-reser">Historial de Reservas</a>
+                </li>
+                <li  *ngIf="isAdmin">
+                    <a href="/admin">Administrador Reservas</a>
+                </li>
+                <li class="dropdown" (click)="toggleMenu()">
+                {{username}}
+                    <ul class="dropdown-menu" *ngIf="isMenuOpen">
+                        <li (click)="logout()">Cerrar sesión</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>

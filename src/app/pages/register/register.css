@@ -1,6 +1,6 @@
 /* Formulario completamente centrado y moderno */
 .register-container {
-  position: absolute;
+  position: relative;
   top: 15%; /* Lo coloca ligeramente más arriba del centro */
   left: 50%;
   transform: translate(-50%, 0);
@@ -14,6 +14,7 @@
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   color: #2c3e50;
   z-index: 10;
+  margin: 15% 0;
 }
 
 /* Título del formulario */

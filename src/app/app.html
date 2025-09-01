@@ -1,8 +1,113 @@
+<app-header *ngIf="showHeader"></app-header>
+
 <div class="background-layer"></div>
 <div>
     <div *ngIf="lookElement()" class="auth-container">
-        <a href="/login" class="login-container">Login</a>
-        <a href="/register" class="register-container">Register</a>
+        <a href="/login" class="login-container">Iniciar Sesion</a>
+        <a href="/register" class="register-container">Registrarse</a>
     </div>
     <router-outlet />
 </div>
+<div *ngIf="showHome" class="home-container">
+
+  <!-- Welcome 
+  <section class="hero-container section-flex">
+    <div class="section-text">
+      <h1>🌍 Bienvenido a <strong>Hot Cars</strong></h1>
+      <p>
+        En <strong>Hot Cars</strong> somos una agencia global de alquiler de autos que te ofrece la libertad de viajar a tu manera.
+        Con presencia en más de <strong>120 países y 500 ciudades</strong>, nos especializamos en brindar soluciones de movilidad rápidas,
+        seguras y accesibles para todos nuestros clientes.
+      </p>
+    </div>
+    <div class="section-image">
+      <img src="assets/hero.png" alt="Bienvenida Hot Cars">
+    </div>
+  </section>-->
+
+  <!-- Mission 
+  <section class="mission-container section-flex">
+    <div class="section-text">
+      <h2>🚗 Nuestra misión</h2>
+      <p>
+        Conectar personas con experiencias inolvidables a través de un servicio de alquiler de autos confiable,
+        moderno y adaptado a cada necesidad.
+      </p>
+    </div>
+    <div class="section-image">
+      <img src="assets/mission.png" alt="Nuestra misión">
+    </div>
+  </section>-->
+
+  <!-- Advantages -->
+  <section class="why-container section-flex">
+    <div class="section-text">
+      <h2>✨ ¿Por qué elegir Hot Cars?</h2>
+      <ul>
+        <li><strong>Cobertura mundial:</strong> desde grandes metrópolis hasta destinos turísticos exclusivos.</li>
+        <li><strong>Flota variada:</strong> autos económicos, camionetas familiares, SUVs de lujo y deportivos de alta gama.</li>
+        <li><strong>Atención 24/7:</strong> soporte multilingüe en cualquier parte del mundo.</li>
+        <li><strong>Reservas fáciles:</strong> gestiona todo en línea en pocos clics.</li>
+        <li><strong>Transparencia total:</strong> sin costos ocultos ni sorpresas.</li>
+      </ul>
+    </div>
+    <div class="section-image">
+      <img src="assets/advantages.png" alt="Ventajas Hot Cars">
+    </div>
+  </section>
+
+  <!-- Fleet
+  <section class="fleet-container section-flex">
+    <div class="section-text">
+      <h2>🚙 Nuestra flota</h2>
+      <ul>
+        <li><strong>Económicos:</strong> prácticos y accesibles para recorridos urbanos.</li>
+        <li><strong>Familiares:</strong> espaciosos y cómodos para viajes largos.</li>
+        <li><strong>SUVs y 4x4:</strong> perfectos para aventuras fuera de la ciudad.</li>
+        <li><strong>Deportivos & Premium:</strong> vive la experiencia de conducir modelos exclusivos.</li>
+      </ul>
+    </div>
+    <div class="section-image">
+      <img src="assets/fleet.png" alt="Nuestra flota">
+    </div>
+  </section> -->
+
+  <!-- Coverage 
+  <section class="coverage-container section-flex">
+    <div class="section-text">
+      <h2>🌐 Hot Cars en el mundo</h2>
+      <p>Actualmente ofrecemos servicios en:</p>
+      <ul>
+        <li><strong>América Latina:</strong> Colombia, México, Brasil, Argentina y más.</li>
+        <li><strong>Norteamérica:</strong> Estados Unidos y Canadá.</li>
+        <li><strong>Europa:</strong> España, Italia, Francia, Alemania, Reino Unido.</li>
+        <li><strong>Asia & Medio Oriente:</strong> Japón, Emiratos Árabes, China, India.</li>
+        <li><strong>Oceanía:</strong> Australia y Nueva Zelanda.</li>
+      </ul>
+    </div>
+    <div class="section-image">
+      <img src="assets/map.png" alt="Cobertura mundial">
+    </div>
+  </section>-->
+
+  <!-- Testimonials -->
+  <section class="testimonials-container section-flex">
+    <div class="section-text">
+      <h2>⭐ Testimonios</h2>
+      <blockquote>
+        “Alquilar con Hot Cars fue la mejor decisión de mi viaje a Europa. Autos impecables y servicio excelente.”
+        <br><em>– Laura G.</em>
+      </blockquote>
+      <blockquote>
+        “Reservé en línea desde Colombia y recogí el auto en Nueva York sin complicaciones. Recomendadísimos.”
+        <br><em>– Andrés P.</em>
+      </blockquote>
+    </div>
+    <div class="section-image">
+      <img src="assets/testimonials.png" alt="Clientes satisfechos">
+    </div>
+  </section>
+</div>
+
+
+<app-footer />

@@ -32,14 +32,15 @@
 
 .card img {
   width: 100%;
-  height: 150px;
+  
   object-fit: cover;
   border-bottom: 2px solid var(--primary);
 }
 
 .category{
-  background: white;
-  padding: 9rem;
+  background: #ffffffc2;
+  padding: 0 2.5%;
+  margin-bottom: 10px;
 }
 .category h3 {
   border-bottom: 2px solid var(--secondary);
@@ -51,4 +52,95 @@
 .price {
   font-weight: bold;
   color: var(--accent);
+}
+
+.card.vehicle {
+  background-color: #ffffff;  
+  border: 1px solid var(--color-accent);  
+  border-radius: 8px;         
+  padding: 1rem;              
+  box-shadow: 0 2px 6px rgba(95,125,107,0.15);
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+.card.vehicle:hover {
+  transform: scale(1.03);   /* se agranda un poquito al pasar el mouse */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* sombra para dar efecto clicable */
+}
+.vehicleDesc {
+   background-color: #f8faff;   /* Azul muy claro de fondo */
+  border-top: 1px solid var(--color-accent); /* Línea superior en azul rey */
+  padding: 0.8rem;            /* Espaciado interno */
+  border-radius: 0 0 8px 8px; /* Bordes inferiores redondeados (coinciden con la card) */
+}
+
+  .vehicleDesc h4 {
+  color: var(--color-accent);      /* Azul rey en el título */
+  margin-bottom: 0.4rem;
+}
+
+.vehicleDesc p {
+  color: #3c4a42;                  /* Gris oscuro para texto secundario */
+  margin: 0.2rem 0;
+  font-size: 0.95rem;
+}
+
+.vehicleDesc p:last-child {
+  font-weight: bold;                  /* El precio más destacado */
+  color: #5f7d6b;
+}
+
+h1 {
+    text-align: left;
+    color: #616160;
+}
+
+.category h2 {
+  font-size: 1.8rem;       /* más grande */
+  font-weight: bold;       /* en negrita */
+  color: #3e5f4b;          /* tono oscuro elegante */
+  margin-bottom: 10px;     /* espacio debajo */
+  position: relative;      /* necesario para pseudo-elementos */
+  text-transform: uppercase; /* todo en mayúsculas */
+}
+
+.category h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #a9cbb7; /* línea azul debajo */
+  margin-top: 5px;
+  border-radius: 2px;
+}
+.loading {
+  position: fixed;              /* que ocupe toda la pantalla */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9); /* fondo semitransparente */
+  display: flex;
+  flex-direction: column;       /* para que spinner y texto estén en columna */
+  justify-content: center;      /* centrar vertical */
+  align-items: center;          /* centrar horizontal */
+  z-index: 9999;                /* siempre al frente */
+  font-size: 1.5rem;
+  color: #2c3e50;
+}
+
+/* Spinner animado */
+.spinner {
+  border: 6px solid #f3f3f3;    /* borde gris claro */
+  border-top: 6px solid #3498db;/* borde azul */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

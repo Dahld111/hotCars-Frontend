@@ -1,66 +1,153 @@
-/* Centrado visual del contenedor principal */
-.home-search-container {
-  position: absolute;
-  top: 15%; /* ligeramente más arriba del centro */
-  left: 50%;
-  transform: translate(-50%, 0);
-  width: 100%;
-  max-width: 520px;
-  padding: 30px 40px;
-  background-color: rgba(255, 255, 255, 0.08);
-  border: 2px solid #a4c3d1; /* Azul niebla */
-  border-radius: 0px; /* Bordes cuadrados */
-  backdrop-filter: blur(6px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-  color: #2c3e50;
-  z-index: 10;
+:root {
+  --color-bg-base: #e3e6e4;
+  --color-surface: #ffffff;
+  --color-primary: #2f4038;
+  --color-secondary: #3e5f4b;
+  --color-muted: #a9cbb7;
+  --color-accent: #5f7d6b;
+  --color-accent-hover: #4c6a59;
+  --color-success-light: rgba(168, 213, 186, 0.4);
+  --shadow-soft: 0 2px 6px rgba(0, 0, 0, 0.05);
+  --text-shadow: 1px 1px 2px rgba(47, 64, 56, 0.3);
+  --radius: 8px;
 }
 
-/* Título del buscador */
+/* Buscador: solo cambio de colores */
+.home-search-container {
+  position: relative;
+  margin: 3rem auto 2rem;
+  max-width: 520px;
+  padding: 30px 40px;
+  background-color: rgba(235, 245, 240, 0.08);
+  border: 2px solid var(--color-muted);
+  border-radius: var(--radius);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  color: var(--color-primary);
+}
+
 .home-search-container p {
   font-size: 1.4em;
   font-weight: bold;
   text-align: center;
-  color: #2c3e50;
+  color: var(--color-accent);
   margin-bottom: 25px;
 }
 
-/* Etiquetas de los campos */
 label {
   display: block;
   margin-bottom: 6px;
   font-size: 0.95em;
-  color: #2c3e50;
+  color: var(--color-primary);
 }
 
-/* Campos de entrada */
 input[type="text"],
 input[type="date"] {
   width: 100%;
   padding: 10px 12px;
   margin-bottom: 18px;
-  border: 1px solid #c5c6d0;
+  border: 1px solid var(--color-muted);
   background-color: rgba(255, 255, 255, 0.15);
-  color: #2c3e50;
+  color: var(--color-primary);
   border-radius: 4px;
   font-size: 0.95em;
-  transition: border 0.3s ease;
 }
 
-/* Botón de búsqueda */
 #searchBtn {
   width: 100%;
   padding: 12px;
-  background-color: #2c3e50;
-  color: #ffffff;
+  background-color: var(--color-accent);
+  color: var(--color-surface);
   font-weight: bold;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   font-size: 1em;
-  transition: background-color 0.3s ease;
 }
 
 #searchBtn:hover {
-  background-color: #1a252f;
+  background-color: var(--color-accent-hover);
+}
+
+/* Contenido importado desde showHome */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: var(--color-bg-base);
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--color-primary);
+}
+
+.home-container .container {
+  width: 100%;
+  max-width: 960px;
+  background-color: var(--color-surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  padding: 2rem;
+}
+
+.home-container h1,
+.home-container h2 {
+  color: var(--color-secondary);
+  margin-bottom: 1rem;
+  text-shadow: var(--text-shadow);
+}
+
+.home-container p,
+.home-container ul {
+  font-size: 1rem;
+  color: var(--color-primary);
+  line-height: 1.6;
+}
+
+.home-container ul {
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+}
+
+.home-container li {
+  margin-bottom: 0.75rem;
+}
+
+/* Bordes laterales por sección */
+.hero-container {
+  background-color: var(--color-success-light);
+  border-left: 6px solid var(--color-secondary);
+}
+
+.mission-container {
+  border-left: 6px solid var(--color-accent);
+}
+
+.why-container {
+  border-left: 6px solid var(--color-muted);
+}
+
+.fleet-container {
+  border-left: 6px solid var(--color-accent-hover);
+}
+
+.coverage-container {
+  border-left: 6px solid var(--color-secondary);
+}
+
+.testimonials-container blockquote {
+  background-color: var(--color-success-light);
+  border-left: 4px solid var(--color-accent);
+  padding: 1rem 1.5rem;
+  margin: 1rem 0;
+  font-style: italic;
+  color: var(--color-primary);
+  border-radius: var(--radius);
+}
+
+.testimonials-container em {
+  display: block;
+  margin-top: 0.5rem;
+  color: var(--color-secondary);
+  font-weight: bold;
 }

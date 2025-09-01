@@ -1,0 +1,51 @@
+.section {
+  background-color: var(--color-bg-base);
+  color: var(--color-primary);
+  padding: 4rem 2rem;
+  line-height: 1.8;
+  letter-spacing: 0.02em;
+  box-shadow: var(--shadow-medium);
+  border-radius: 8px;
+}
+
+h1, h2 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+  margin-bottom: 1.5rem;
+  text-shadow: var(--text-shadow);
+}
+
+p {
+  font-size: 1.2rem;
+  max-width: 70ch;
+  margin-bottom: 1.5rem;
+  color: var(--color-primary);
+}
+
+.lead {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--color-accent);
+}
+
+.under {
+  border-bottom: 2px solid var(--color-muted);
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.figure {
+  background-color: var(--glass-bg);
+  padding: 2rem;
+  border-radius: 8px;
+  color: var(--color-muted);
+  text-align: center;
+}

@@ -38,13 +38,13 @@ export class Results implements OnInit {
       // Realizar búsqueda
       const searchRes: any = await this.http.post('/api/Vehicle/search', {
         PickUp: {
-          PickUpType: 'airport',
+          PickUpType: 'City',
           PickUpDateTime: pickupDate,
           DestinationCode: pickupCity,
           PlaceId: null
         },
         DropOff: {
-          DropOffType: 'airport',
+          DropOffType: 'City',
           DropOffDateTime: dropoffDate,
           DestinationCode: dropoffCity,
           PlaceId: null

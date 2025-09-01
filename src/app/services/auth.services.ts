@@ -29,7 +29,6 @@ export class AuthServices {
     return this.http.post( 'http://localhost:3000/login', credentials );
   }
 
-  //  02/07  REVISAR Y COMPLETAR LO Q HACE FALTA
   saveLocalStorage( key: string, data: any ) {
     localStorage.setItem( key, data );
   }
@@ -43,6 +42,7 @@ export class AuthServices {
       .pipe( 
         map( (data: any ) => {
         console.log( 'Service', data );
+        localStorage.setItem('userId', data.user._id);
 
         return data.token;
       }),

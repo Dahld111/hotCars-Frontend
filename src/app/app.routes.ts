@@ -6,6 +6,13 @@ import { Results } from './pages/results/results';
 import { Details } from './pages/details/details';
 import { Reservation } from './pages/reservation/reservation';
 import { Driver } from './pages/driver/driver';
+import { UserReser } from './pages/user-reser/user-reser';
+import { Admin } from './pages/admin/admin';
+import { Ourmission } from './pages/ourmission/ourmission';
+import { World } from './pages/world/world';
+import { Why } from './pages/why/why';
+import { Privacy } from './pages/privacy/privacy';
+import { Conditions } from './pages/conditions/conditions';
 
 export const routes: Routes = [
     {path: "register", component: Register},
@@ -14,5 +21,12 @@ export const routes: Routes = [
     {path: "results", component: Results},
     {path: "details", component: Details},
     {path: "reservation", component: Reservation},
-    {path: "driver", component: Driver}
+    {path: "driver", component: Driver},
+    {path: "user-reser", component: UserReser},
+    {path: "admin", component: Admin},
+    {path: "our-mission", component: Ourmission},
+    {path: "world", component: World},
+    {path: "why", component: Why},
+    {path: "privacy", component: Privacy},
+    {path: "conditions", component: Conditions}
 ];
