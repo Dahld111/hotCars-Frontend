@@ -1,20 +1,20 @@
 /* Formulario completamente centrado y moderno */
 .register-container {
   position: relative;
-  top: 15%; /* Lo coloca ligeramente más arriba del centro */
+  top: 15%;
   left: 50%;
   transform: translate(-50%, 0);
   width: 100%;
   max-width: 480px;
   padding: 30px 40px;
-  background-color: rgba(255, 255, 255, 0.08);
-  border: 2px solid #a4c3d1; /* Azul niebla */
-  border-radius: 0px; /* Bordes cuadrados */
+  background-color: rgba(240, 255, 250, 0.06); /* Verde pálido translúcido */
+  border: 2px solid #8fbfb2; /* Verde frío suave */
+  border-radius: 0px;
   backdrop-filter: blur(6px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-  color: #2c3e50;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  color: #1f2f2c; /* Verde oscuro neutro */
   z-index: 10;
-  margin: 15% 0;
+  margin: 3.5% 0;
 }
 
 /* Título del formulario */
@@ -22,8 +22,8 @@
   font-size: 2em;
   text-align: center;
   margin-bottom: 25px;
-  color: #2c3e50;
-  text-shadow: 1px 1px 2px rgba(44, 62, 80, 0.3);
+  color: #1f2f2c;
+  text-shadow: 1px 1px 2px rgba(31, 47, 44, 0.3);
 }
 
 /* Grupos de campos */
@@ -41,23 +41,23 @@
 /* Estilos de campos */
 input, select {
   padding: 10px 12px;
-  border: 1px solid #c5c6d0;
-  background-color: rgba(255, 255, 255, 0.15);
-  color: #2c3e50;
+  border: 1px solid #a3b9b4; /* Verde grisáceo */
+  background-color: rgba(240, 255, 250, 0.12);
+  color: #1f2f2c;
   border-radius: 4px;
   font-size: 0.95em;
   transition: border 0.2s ease;
 }
 
 input.invalid, select.invalid {
-  border-color: #ff6b6b;
+  border-color: #e57373; /* Rojo suave */
   background-color: rgba(255, 0, 0, 0.05);
 }
 
 /* Mensajes de error */
 .error-message {
   font-size: 0.85em;
-  color: #ff6b6b;
+  color: #e57373;
   margin-top: 5px;
 }
 
@@ -65,7 +65,7 @@ input.invalid, select.invalid {
 .submit-btn {
   width: 100%;
   padding: 12px;
-  background-color: #2c3e50;
+  background-color: #1f2f2c; /* Verde oscuro neutro */
   color: #ffffff;
   font-weight: bold;
   border: none;
@@ -75,7 +75,7 @@ input.invalid, select.invalid {
 }
 
 .submit-btn:hover {
-  background-color: #1a252f;
+  background-color: #14201e; /* Más profundo al hacer hover */
 }
 
 /* Enlace de inicio de sesión */
@@ -86,7 +86,7 @@ input.invalid, select.invalid {
 }
 
 .login-link a {
-  color: #b2ebf2;
+  color: #a8e3d2; /* Verde agua claro */
   text-decoration: none;
 }
 
